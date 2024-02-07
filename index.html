@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rose</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="class">
+            <h1><span class="auto-type"></span></h1>
+            <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <script>
+          var typed =new Typed(".auto-type",{
+            strings: ["Happy Rose Day......"],
+            typeSpeed:50,
+            backSpeed:50,
+            loop: true
+          })
+          </script>
+        </div>
+        <div class="letter">
+            <div class="background"></div>
+            <h2>
+                Its been a year and here I go again asking the most precious woman in my life.....Will you be my valentine???
+            </h2>
+            <button id="yes">YES!</button>
+            <button id="no">NO</button>
+        </div>
+        <div class="rose">
+            <div class="flower">
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+            </div>
+            <div class="leaf">
+                <div class="stem"></div>
+                    <div class="leafs"></div>
+                    <div class="leafs"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const buttonHeight=40;
+        const buttonWidth=100;
+        const maxWidth=window.innerWidth-buttonWidth; 
+        const maxHeight=window.innerHeight-buttonHeight; 
+        window.addEventListener('DOMContentLoaded',()=>{
+            const button=document.getElementById('no');
+            button.addEventListener('click',()=>alert('Noah That aint happening gurl!!'));
+            const button1=document.getElementById('yes');
+            button1.addEventListener('click',()=>alert('Love You Loads princess <3'))
+            button.addEventListener('mouseover', () => {
+                const randomLeft = Math.floor(Math.random() * maxWidth);
+                const randomTop = Math.floor(Math.random() * maxHeight);
+
+                button.style.left = `${randomLeft}px`;
+                button.style.top = `${randomTop}px`;
+            });
+    });
+    </script>
+</body>
+</html>
