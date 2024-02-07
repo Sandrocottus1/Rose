@@ -1,0 +1,196 @@
+body{
+    background:#FFB6C1;
+    margin: 0;
+    padding: 0;
+}
+
+.class{
+    font-family: 'Freestyle Script';
+    font-size: 60px;
+    color: #f03a64;
+    position: fixed;
+    top: -26%;
+    font-size: 50px;
+}
+  
+  body {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-content: center;
+  }
+  h2 {
+    font-family: system-ui, sans-serif;
+    font-size: 5rem;
+    cursor: pointer;
+  }
+.container{
+    width:800px;
+    height:400px;
+    position:absolute;
+    top: 50%;
+    left: 30%;
+    transform:translate(-50%,-50%);
+}
+h2{
+   font-family: 'Sacramento',cursive;
+   color: red;
+   font-size: 35px; 
+}
+.letter{
+    position: absolute;
+    top:20%;
+    width: 600px;
+    height: 400px;
+    display: inline-block;
+}
+.rose{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 120%;
+    display: inline-block;
+    animation: animate 5s infinite;
+    transform: translateY(40%);
+}
+.petal{
+    width: 50px;
+    height: 50px;
+    background-color:#fe7696;
+    border-radius: 0px 50%;
+    position: absolute;
+    box-shadow: 0 0 10px #d1123f;
+    z-index: 2;
+    transform-origin: bottom-right;
+    animation: animate2 10s infinite;
+}
+.petal:nth-child(2){
+     transform-origin: right bottom;
+     transform: rotate(90deg);
+     background: #fe7696;
+     left: -10px;
+     animation: animate1 10s infinite;
+}
+.petal:nth-child(3){
+    width: 40px;
+    height: 40px;
+    left: 10px;
+    z-index: 1;
+    top: -20px;
+    background: #f03a64;
+    transform-origin:bottom right;
+    animation: animate2 10s infinite;
+}
+.petal:nth-child(4){
+    transform: rotate(90deg);
+    width: 40px;
+    height: 40px;
+    left: 0px;
+    top: -20px;
+    z-index: 1;
+    background: #f03a64;
+    transform-origin: bottom right;
+    animation: animate1 10s infinite;
+}
+.petal:nth-child(5){
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    left: 20px;
+    top: -30px;
+    z-index: 0;
+    background: #d1123f;
+}
+.leaf{
+    position: absolute;
+    top: 120px;
+    left: -115px;
+}
+.stem{
+    width: 240px;
+    height: 40px;
+    background: transparent;
+    border: 8px solid #50C878;
+    border-color: #77a377 transparent transparent transparent;
+    border-radius: 50% 50%;
+    transform: rotate(100deg);
+}
+.background {
+    position: absolute;
+    top: -40%;
+    left: 80%;
+    width: 180%;
+    height: 180%;
+    background-image: url('background.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.25;
+    transform: rotate(5deg);
+    z-index: -1;
+  }
+.leafs{
+    width: 50px;
+    height: 40px;
+    border-radius: 0px 50%;
+    background: #77a377;
+    position: absolute;
+    top: 0;
+    left:100px;
+    z-index: 0;
+}
+.leafs:nth-child(2){
+    width: 40px;
+    height: 20px;
+    top: 40px;
+    left: 140px;
+    left: 140px;
+    transform:rotate(120deg);
+}
+@keyframes animate{
+    50%{
+        transform: translateY(35%);
+    }
+    100%{
+        transform: translateY(40%);
+    }
+}
+@keyframes animate1{
+    50%{
+        transform: rotate(110deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+@keyframes animate2{
+    50%{
+        transform: rotate(-20deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+#yes{
+    color: white;
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+    background: #3a9257;
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#no{
+    cursor: pointer;
+    color: white;
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 20px;
+    background: red;
+    position: absolute;
+    top: 80%;
+    left: 40%;
+}
